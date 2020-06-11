@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         cardRSterdekat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RSTerdekat.class));
+                startActivity(new Intent(MainActivity.this, RumahSakit.class));
             }
         });
     }

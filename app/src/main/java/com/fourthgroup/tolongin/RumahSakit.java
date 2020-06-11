@@ -30,6 +30,7 @@ public class RumahSakit extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.embed_map);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadData(iframe, "text/html", null);
+        // webView.loadData(iframe, "text/html", null);
+        webView.loadUrl("file:///android_asset/mapsFrame.html");
     }
 }

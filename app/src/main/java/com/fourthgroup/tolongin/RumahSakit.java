@@ -2,8 +2,11 @@ package com.fourthgroup.tolongin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageButton;
 
 public class RumahSakit extends AppCompatActivity {
 
@@ -11,10 +14,20 @@ public class RumahSakit extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        WebView webView;
+        ImageButton back;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rumahsakit);
 
-        WebView webView;
+        back = (ImageButton) findViewById(R.id.rs_back_button);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RumahSakit.this, MainActivity.class));
+            }
+        });
+
         webView = (WebView) findViewById(R.id.embed_map);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadData(iframe, "text/html", null);

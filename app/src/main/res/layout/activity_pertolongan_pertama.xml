@@ -4,6 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PertolonganPertama">
+    tools:context=".PertolonganPertama"
+    android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/header_pertolongan"
+        android:foreground="@drawable/foreground_overlays"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- LIST 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_BHD"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="10dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/ic_hospital"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="40dp"
+                        android:text="Bantuan Hidup Dasar"
+                        android:textColor="#000"
+                        app:layout_constraintLeft_toRightOf="@+id/image1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+             <!-- EXPAND LIST 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/expandableList1"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="30dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/definisi_BHD"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:paddingHorizontal="20dp"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="#FFF"
+                        android:paddingHorizontal="50dp"
+                        android:text="LEBIH LANJUT"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- BHD information -->
+    <LinearLayout
+        android:id="@+id/infoBHD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="H,16:9"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="@+id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolBar"
+        app:layout_constraintStart_toStartOf="@+id/toolBar"
+        app:layout_constraintEnd_toEndOf="@+id/toolBar"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bantuan Dasar Hidup"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/definisi_BHD"
+            android:textColor="#FFF"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEBIH LANJUT"
+            android:backgroundTint="#FFF"
+            android:textColor="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:paddingHorizontal="50dp"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

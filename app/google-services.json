@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1006170584855",
+    "firebase_url": "https://tolong-in-cf0c6.firebaseio.com",
+    "project_id": "tolong-in-cf0c6",
+    "storage_bucket": "tolong-in-cf0c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006170584855:android:704ef5b169e2f7453aa952",
+        "android_client_info": {
+          "package_name": "com.fourthgroup.tolongin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006170584855-1dqjb221819vecpkgtvhnh3k1gvhnndl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxD8thSvFqjQNyVkBCWlZIIy_zrYGcKG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006170584855-1dqjb221819vecpkgtvhnh3k1gvhnndl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,92 +20,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ScrollView
+    <LinearLayout
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="5dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
-
-            <!-- LIST 1 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_BHD"
+            <ListView
+                android:id="@+id/lisView"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
-                android:elevation="30dp"
-                app:cardCornerRadius="10dp">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:src="@drawable/ic_hospital"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="40dp"
-                        android:text="Bantuan Hidup Dasar"
-                        android:textColor="#000"
-                        app:layout_constraintLeft_toRightOf="@+id/image1"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- LIST 2-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btn_RJP"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
-                android:elevation="30dp"
-                app:cardCornerRadius="10dp">
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:src="@drawable/ic_hospital"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="40dp"
-                        android:text="Resus Jantung Paru"
-                        android:textColor="#000"
-                        app:layout_constraintLeft_toRightOf="@+id/image1"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                android:layout_height="match_parent"/>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <!-- DEFINISI -->
     <!-- BHD def -->
@@ -134,6 +68,7 @@
             android:layout_height="wrap_content"
             android:text="@string/definisi_BHD"
             android:textColor="#FFF"
+            android:textSize="10dp"
             android:layout_marginBottom="10dp"/>
         <Button
             android:layout_width="wrap_content"
@@ -162,7 +97,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bantuan Hidup Dasar"
+            android:text="Resus Jantung Paru"
             android:textColor="#FFF"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"/>
@@ -171,6 +106,7 @@
             android:layout_height="wrap_content"
             android:text="@string/definisi_resusJP"
             android:textColor="#FFF"
+            android:textSize="10dp"
             android:layout_marginBottom="10dp"/>
         <Button
             android:layout_width="wrap_content"

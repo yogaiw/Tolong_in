@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RumahSakit"></activity>
+        <activity android:name=".DetailPertolongan"></activity>
+        <activity
+            android:name=".RumahSakit"
+            android:noHistory="true" />
 
         <meta-data
             android:name="com.google.android.gms.version"

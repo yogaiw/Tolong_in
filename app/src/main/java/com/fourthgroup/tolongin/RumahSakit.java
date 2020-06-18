@@ -24,7 +24,7 @@ public class RumahSakit extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RumahSakit.this, MainActivity.class));
+                finish();
             }
         });
 

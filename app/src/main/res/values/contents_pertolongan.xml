@@ -7,4 +7,8 @@
     <string name="definisi_resusJP">
         Resusitasi jantung paru (RJP) atau CPR merupakan langkah pertolongan medis untuk mengembalikan fungsi napas dan atau sirkulasi darah di dalam tubuh yang terhenti. Resusitasi jantung paru bertujuan menjaga darah dan oksigen tetap beredar ke seluruh tubuh.
     </string>
+
+    <string name="memuat">
+        Memuat Data...
+    </string>
 </resources>

@@ -5,19 +5,20 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-
-public class PertolonganPertama extends AppCompatActivity {
+public class PertolonganPertama extends AppCompatActivity implements View.OnClickListener {
 
     ListView listView;
     String mTitle[] = {
@@ -28,6 +29,8 @@ public class PertolonganPertama extends AppCompatActivity {
             R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital};
 
     LinearLayout minfoBHD, minfoRJP;
+    Button btnBHD, btnRJP;
+    DetailPertolongan dp = new DetailPertolongan();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,12 @@ public class PertolonganPertama extends AppCompatActivity {
         listView = findViewById(R.id.lisView);
         minfoBHD = findViewById(R.id.infoBHD);
         minfoRJP = findViewById(R.id.infoRJP);
+
+        btnBHD = findViewById(R.id.btnBHD);
+        btnRJP = findViewById(R.id.btnRJP);
+
+        btnBHD.setOnClickListener(this);
+        btnRJP.setOnClickListener(this);
 
         MyAdapter adapter = new MyAdapter(this, mTitle, images);
         listView.setAdapter(adapter);
@@ -68,6 +77,22 @@ public class PertolonganPertama extends AppCompatActivity {
     private void setAllVisibilityGone() {
         minfoBHD.setVisibility(View.GONE);
         minfoRJP.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnBHD:
+                dp.posisi = 0;
+                startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
+                break;
+            case R.id.btnRJP:
+                dp.posisi = 1;
+                startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
+                break;
+            default:
+                break;
+        }
     }
 
     class MyAdapter extends ArrayAdapter<String> {

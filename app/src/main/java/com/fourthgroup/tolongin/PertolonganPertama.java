@@ -22,11 +22,14 @@ public class PertolonganPertama extends AppCompatActivity implements View.OnClic
 
     ListView listView;
     String mTitle[] = {
-            "Bantuan Hidup Dasar", "Resus Jantung Paru", "Tenggelam",
-            "Pingsan", "Asma", "Pendarahan"
+            "Bantuan Hidup Dasar", "Resus Jantung Paru",
+            "Pingsan", "Asma", "Pendarahan", "Syok", "Patah Tulang", "Luka Bakar",
+            "Hipotermia", "Hipoksia", "Cedera Kepala"
     };
     int images[] = {R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
-            R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital};
+            R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
+            R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
+            R.drawable.ic_hospital, R.drawable.ic_hospital};
 
     LinearLayout minfoBHD, minfoRJP;
     Button btnBHD, btnRJP;
@@ -60,15 +63,31 @@ public class PertolonganPertama extends AppCompatActivity implements View.OnClic
                     } else {
                         setAllVisibilityGone();
                     }
-                }
-
-                if(position == 1) {
+                } if(position == 1) {
                     if (minfoRJP.getVisibility() != View.VISIBLE) {
                         setAllVisibilityGone();
                         minfoRJP.setVisibility(View.VISIBLE);
                     } else {
                         setAllVisibilityGone();
                     }
+                } if(position == 2) {
+                    dp.posisi = 2;
+                    keDetail();
+                } if(position == 3) {
+                    dp.posisi = 3;
+                    keDetail();
+                } if(position == 4) {
+                    dp.posisi = 4;
+                    keDetail();
+                } if(position == 5) {
+                    dp.posisi = 5;
+                    keDetail();
+                } if(position == 6) {
+                    dp.posisi = 6;
+                    keDetail();
+                } if(position == 7) {
+                    dp.posisi = 7;
+                    keDetail();
                 }
             }
         });
@@ -79,20 +98,18 @@ public class PertolonganPertama extends AppCompatActivity implements View.OnClic
         minfoRJP.setVisibility(View.GONE);
     }
 
+    private void keDetail() {
+        startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnBHD:
-                dp.posisi = 0;
-                startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
-                break;
-            case R.id.btnRJP:
-                dp.posisi = 1;
-                startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
-                break;
-            default:
-                break;
+            case R.id.btnBHD: dp.posisi = 0; break;
+            case R.id.btnRJP: dp.posisi = 1; break;
+            default: break;
         }
+        startActivity(new Intent(PertolonganPertama.this, DetailPertolongan.class));
     }
 
     class MyAdapter extends ArrayAdapter<String> {

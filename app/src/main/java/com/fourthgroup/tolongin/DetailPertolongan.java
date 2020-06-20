@@ -53,17 +53,38 @@ public class DetailPertolongan extends AppCompatActivity implements View.OnClick
                 break;
             case 1: ref = FirebaseDatabase.getInstance().getReference("RJP");
                 break;
-            case 2: ref = FirebaseDatabase.getInstance().getReference("Pingsan");
+            case 2:
+                ref = FirebaseDatabase.getInstance().getReference("Pingsan");
+                section2card.setVisibility(View.GONE);
+                section3card.setVisibility(View.GONE);
+                section4card.setVisibility(View.GONE);
                 break;
-            case 3: ref = FirebaseDatabase.getInstance().getReference("Asma");
+            case 3:
+                ref = FirebaseDatabase.getInstance().getReference("Asma");
+                section3card.setVisibility(View.GONE);
+                section4card.setVisibility(View.GONE);
                 break;
-            case 4: ref = FirebaseDatabase.getInstance().getReference("Pendarahan");
+            case 4:
+                ref = FirebaseDatabase.getInstance().getReference("Pendarahan");
+                section3card.setVisibility(View.GONE);
+                section4card.setVisibility(View.GONE);
                 break;
-            case 5: ref = FirebaseDatabase.getInstance().getReference("Syok");
+            case 5:
+                ref = FirebaseDatabase.getInstance().getReference("Syok");
+                section2card.setVisibility(View.GONE);
+                section3card.setVisibility(View.GONE);
+                section4card.setVisibility(View.GONE);
                 break;
             case 6: ref = FirebaseDatabase.getInstance().getReference("PatahTulang");
                 break;
             case 7: ref = FirebaseDatabase.getInstance().getReference("LukaBakar");
+                break;
+            case 8:
+                ref = FirebaseDatabase.getInstance().getReference("Hipotermia");
+                break;
+            case 9:
+                ref = FirebaseDatabase.getInstance().getReference("CederaKepala");
+                section4card.setVisibility(View.GONE);
                 break;
             default:
                 break;
@@ -78,6 +99,12 @@ public class DetailPertolongan extends AppCompatActivity implements View.OnClick
 
                 section2_head.setText(dataSnapshot.child("section2_head").getValue().toString());
                 section2_content.setText(dataSnapshot.child("section2_content").getValue().toString());
+
+                section3_head.setText(dataSnapshot.child("section3_head").getValue().toString());
+                section3_content.setText(dataSnapshot.child("section3_content").getValue().toString());
+
+                section4_head.setText(dataSnapshot.child("section4_head").getValue().toString());
+                section4_content.setText(dataSnapshot.child("section4_content").getValue().toString());
             }
 
             @Override
@@ -85,7 +112,6 @@ public class DetailPertolongan extends AppCompatActivity implements View.OnClick
 
             }
         });
-
     }
 
     @Override

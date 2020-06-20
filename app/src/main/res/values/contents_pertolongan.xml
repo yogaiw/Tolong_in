@@ -11,4 +11,9 @@
     <string name="memuat">
         Memuat Data...
     </string>
+
+    <string name="kesalahan">
+        Dalam pembuatan aplikasi ini kami tentunya tidak luput dari kesalahan, maka dari itu, laporkan kesalahan yang terjadi pada aplikasi ini,
+        baik performa aplikasi maupun informasi yang disajikan pada aplikasi ini
+    </string>
 </resources>

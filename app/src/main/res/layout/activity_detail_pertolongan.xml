@@ -13,7 +13,7 @@
         android:background="@drawable/header_pertolongan"
         android:foreground="@drawable/foreground_overlays"
         android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="H,30:9"
+        app:layout_constraintDimensionRatio="H,40:9"
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="30dp"/>
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"

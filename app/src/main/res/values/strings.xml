@@ -7,7 +7,7 @@
     <string name="menu_rsterdekat">Rumah Sakit Terdekat</string>
     <string name="menu_tips">Tips Keadaan Medis</string>
     <string name="menu_trivia">Tes Pengetahuan P3K</string>
-    <string name="menu_lapor">Laporan Kesalahan</string>
+    <string name="menu_lapor">Laporkan Kesalahan</string>
     <string name="title_activity_rsterdekat">Map</string>
     <string name="title_activity_r_s_terdekat">Map</string>
 </resources>

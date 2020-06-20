@@ -7,12 +7,9 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class MainActivity extends AppCompatActivity {
     ImageButton buttonPertolongan;
-    CardView cardRSterdekat;
+    CardView cardRSterdekat, cardTips, cardLapor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
         buttonPertolongan = (ImageButton) findViewById(R.id.button_pertolongan);
         cardRSterdekat = (CardView) findViewById(R.id.button_rsterdekat);
+        cardTips = (CardView) findViewById(R.id.buttonTips);
+        cardLapor = (CardView) findViewById(R.id.buttonLapor);
 
         buttonPertolongan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RumahSakit.class));
+            }
+        });
+
+        cardTips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TipsMedis.class));
+            }
+        });
+
+        cardLapor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Lapor.class));
             }
         });
     }

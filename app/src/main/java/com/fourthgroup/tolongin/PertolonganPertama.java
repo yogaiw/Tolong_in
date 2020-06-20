@@ -24,12 +24,12 @@ public class PertolonganPertama extends AppCompatActivity implements View.OnClic
     String mTitle[] = {
             "Bantuan Hidup Dasar", "Resus Jantung Paru",
             "Pingsan", "Asma", "Pendarahan", "Syok", "Patah Tulang", "Luka Bakar",
-            "Hipotermia", "Hipoksia", "Cedera Kepala"
+            "Hipotermia", "Cedera Kepala"
     };
     int images[] = {R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
             R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
             R.drawable.ic_hospital, R.drawable.ic_hospital, R.drawable.ic_hospital,
-            R.drawable.ic_hospital, R.drawable.ic_hospital};
+            R.drawable.ic_hospital};
 
     LinearLayout minfoBHD, minfoRJP;
     Button btnBHD, btnRJP;
@@ -87,6 +87,12 @@ public class PertolonganPertama extends AppCompatActivity implements View.OnClic
                     keDetail();
                 } if(position == 7) {
                     dp.posisi = 7;
+                    keDetail();
+                } if(position == 8) {
+                    dp.posisi = 8;
+                    keDetail();
+                } if (position == 9) {
+                    dp.posisi = 9;
                     keDetail();
                 }
             }
